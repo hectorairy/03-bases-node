@@ -1,0 +1,14 @@
+{
+  "name": "03-bases-node",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:hectorairy/03-bases-node.git",
+  "author": "Héctor Airy <hello@hectorairy.com>",
+  "license": "MIT",
+  "scripts": {
+    "base3": "node app --base=3"
+  },
+  "dependencies": {
+    "colors": "1.4.0"
+  }
+}
