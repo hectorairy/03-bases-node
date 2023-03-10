@@ -2,19 +2,21 @@ const fs = require("fs");
 
 require("colors");
 
-const crearArchivo = (base = 5, listar) => {
+const crearArchivo = (base = 5, listar = false, hasta = 10) => {
   return new Promise((resolve, reject) => {
     let tabla = "";
+    let tablaColor = "";
 
-    for (let i = 1; i <= 10; i++) {
-      tabla += base + " X ".red + i + " = ".blue + `${base * i}\n`.cyan;
+    for (let i = 1; i <= hasta; i++) {
+      tabla += `${base} X ${i} = ${base * i}\n`;
+      tablaColor += base + " X ".red + i + " = ".blue + `${base * i}\n`.cyan;
     }
 
     if (listar) {
       console.log("================".rainbow);
       console.log(`  Tabla del ${base}   `.bgBrightWhite.black);
       console.log("================".rainbow);
-      console.log(tabla);
+      console.log(tablaColor);
     }
 
     // fs.writeFile(`tabla-${base}.txt`, tabla, (err) => {

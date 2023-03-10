@@ -11,8 +11,16 @@ const argv = require("yargs")
     default: false,
     describe: "Muestra la tabla en consola",
   })
+  .option("h", {
+    alias: "hasta",
+    type: "number",
+    default: 10,
+    describe: "Indica hasta que numero se genera la tabla",
+  })
   .check((argv, options) => {
     if (isNaN(argv.b)) throw new Error("La base tiene que ser un numero");
+    if (isNaN(argv.h))
+      throw new Error("El limite de la tabla tiene que ser un numero");
     return true;
   }).argv;
 
