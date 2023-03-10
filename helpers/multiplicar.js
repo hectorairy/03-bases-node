@@ -23,7 +23,7 @@ const crearArchivo = (base = 5, listar = false, hasta = 10) => {
     //   if (err) throw err;
     //   console.log("archivo creado!");
     // });
-    const name = `tabla-${base}.txt`;
+    const name = `./outputs/tabla-${base}.txt`;
     try {
       fs.writeFileSync(name, tabla);
       resolve(name);
